@@ -41,9 +41,8 @@
       <!-- begin editable section -->
       <section class="center">
         <h1>API Integration: Getting Social</h1>
-        <ul>
-          <li>Learn how to integrate your tweets, Instagram photos, Google Maps and other social media and APIs to your site.</li>
-        </ul>
+
+	Learn how to integrate your tweets, Instagram photos, Google Maps and other social media and APIs to your site.
       </section>
       <!-- each <section> element creates a new slide. -->
       <section class="cover">
@@ -73,56 +72,339 @@
       </section>
 
       <section>
-        <h1>Example Course Outline</h1>
-        <h2>Morning</h2>
+        <h1>I spy with my API...</h1>
+        <h2>Definitions</h2>
         <ul>
-          <li>Intro to HTML</li>
-          <li>Write the HTML for your first project</li>
-          <li>Intro to CSS</li>
+          <li>What is an API?</li>
+          <li>Iframes and Embeds</li>
         </ul>
-        <h2>Afternoon</h2>
+        <h2>Show me the code</h2>
         <ul>
-          <li>More CSS</li>
-          <li>Final touches</li>
-          <li>Fin! And next steps</li>
+          <li>Instagram (iframe)</li>
+          <li>Youtube (iframe)</li>
+          <li>Vimeo (iframe)</li>
+          <li>Eventbrite (iframe)</li>
+          <li>Google Maps (iframe)</li>
+          <li>Twitter (script)</li>
+          <li>Pintrest (script)</li>
         </ul>
       </section>
 
-      <section>
-        <iframe src="//instagram.com/p/bNTUnwB0Kw/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-      </section>
+<section>
+  <H1>Application Programming Interface</H1>
+  In computer programming, an application programming interface (API) specifies how some software components should interact with each other.
+  <br><br>
+In practice, many times an API comes in the form of a library that includes specifications for routines, data structures, object classes, and variables.
+</section>
 
-      <section>
-        <h1>A slide with an Image</h1>
-        <img src="http://distilleryimage4.ak.instagram.com/3932b9eae1fc11e2902922000a1fc70b_7.jpg">
-      </section>
 
-      <section>
-        <h1>A slide with some HTML Code</h1>
-        <pre><code>
-<!-- remember to escape the < character -->
-&lt;!doctype html>
-&lt;head>
-  &lt;title>Ladies Learning Code HTML and CSS&lt;/title>
-  &lt;style>
-    p {
-    color: red;
-    text-decoration: underline;
-    }
-  &lt;/style>
-&lt;/head>
-&lt;body>
-  &lt;p>This is a paragraph&lt;/p>
-&lt;/body>
-&lt;/html>
-					</code></pre>
-      </section>
+<section>
+  <h1>Inline Frame (IFrame)</h1>
 
-      <section data-markdown>
-        # You can write your slides in mardown if you add the `data-markdown` attribute - markdown makes it a bit easier to write content for the web - learn more about [markdown syntax](https://daringfireball.net/projects/markdown/syntax) ## A level 2 header in markdown ``` \\ some code in markdown ```
-      </section>
+<img src="content/images/frame_pain.jpg" style="border: none; width: 100%">
+</section>
 
-      <!-- end editable section -->
+<section>
+  <h2>IFrame-ception!</h2>
+An IFrame element may contain another HTML document or even an entire website within the same browser window.
+<br>
+<img src="content/images/inception-gif.jpg" style="border: none; width: 100%">
+<br>
+In addition to having an independent scrollbar, the IFrame can serve as a link target, be printed and contains viewable source code.
+
+  <br><br>
+  https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe
+  
+  <br><br>
+
+</section>
+
+<section>
+  <h1>Iframe Options</h1>
+  <table border="0" cellspacing="0" cellpadding="0" class="ifInfo" style="margin-bottom: 15px; font-size: 18px">
+  <tbody><tr>
+    <th scope="col">Attribute</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>As described above, this attribute can be used in conjunction with the <code>target</code> attribute of a link to change the iframe's <code>src</code></td>
+  </tr>
+  <tr>
+    <td><code>scrolling</code></td>
+    <td>Can be <code>scrolling="yes"</code> or <code>scrolling="no"</code> . Specifies if a scrollbar should be shown for the content in the frame. Note that using CSS is actually the preferred method for controlling scrolling, but we still use the <code>scrolling</code> attribute to ensure compatibility with older browsers.</td>
+  </tr>
+  <tr>
+    <td><code>frameborder</code></td>
+    <td>This controls whether there is a border on the frame (<code>frameborder="1"</code>) or not (<code>frameborder="0"</code>). As with <code>scrolling</code>, this property really should be controlled via CSS, but we have to stick with <code>frameborder</code> for browser compatibility. By setting <code>frameborder="0"</code>, the iframe becomes much less noticeable and the content appears to be part of the main page.</td>
+  </tr>
+  <tr>
+    <td><code>allowtransparency</code></td>
+    <td>If you want the background of your main page to be visible behind the iframe, you need to enable transparency by adding <code>allowtransparency="true"</code> .</td>
+  </tr>
+</tbody></table>
+<br>
+  http://www.dwuser.com/education/content/the-magical-iframe-tag-an-introduction/
+</section>
+
+<section>
+  <h1>Instagram</h1>
+   <!-- http://instafeedjs.com/
+  How can I embed my Instagram photos or videos on a web page?
+  https://help.instagram.com/513918941996087
+
+We provide two simple ways to get information about a shared link in order to display a preview: an OEmbed endpoint and a simple URL append endpoint. Neither requires an access_token or client_id.-->
+  http://instagram.com/developer/embedding/
+
+  <pre><code>
+  &lt;iframe src=&quot;//instagram.com/p/bNTUnwB0Kw/embed/&quot;
+          width=&quot;612&quot;
+          height=&quot;710&quot;
+          frameborder=&quot;0&quot;
+          scrolling=&quot;no&quot;
+          allowtransparency=&quot;true&quot;&gt;
+  &lt;/iframe&gt;
+  </code></pre>
+
+<!--
+ <iframe src="//instagram.com/p/bNTUnwB0Kw/embed/"
+            width="612"
+            height="710"
+            frameborder="0"
+            scrolling="no"
+            allowtransparency="true"
+    ></iframe>
+-->
+</section>
+
+<section>
+  <h1>Youtube</h1>
+  http://leaderswest.com/2012/10/10/youtube-embed-options-can-make-your-videos-look-less-youtube-y/
+<br><br>
+  https://developers.google.com/youtube/player_parameters
+  <pre><code>
+   &lt;iframe width=&quot;420&quot;
+           height=&quot;315&quot;
+           src=&quot;//www.youtube.com/embed/N4d7Wp9kKjA&quot;
+           frameborder=&quot;0&quot;
+           allowfullscreen&gt;
+   &lt;/iframe&gt;
+  </code></pre>
+<!--
+ <iframe width="420"
+          height="315"
+          src="//www.youtube.com/embed/N4d7Wp9kKjA"
+          frameborder="0"
+          allowfullscreen>
+</iframe>
+-->
+
+</section>
+
+<section>
+  <h1>Vimeo</h1>
+  http://developer.vimeo.com/player/embedding
+  - Good example, pretty clear documentation
+  <pre><code>
+  &lt;iframe src=&quot;//player.vimeo.com/video/VIDEO_ID&quot;
+          width=&quot;WIDTH&quot;
+          height=&quot;HEIGHT&quot;
+          frameborder=&quot;0&quot;
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen&gt;
+  &lt;/iframe&gt;
+  </code></pre>
+<!--
+  <iframe src="//player.vimeo.com/video/VIDEO_ID"
+          width="WIDTH"
+          height="HEIGHT"
+          frameborder="0"
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen>
+  </iframe>
+-->
+</section>
+
+<section>
+  <h1>Eventbrite</h1>
+  https://developer.eventbrite.com/doc/widgets/
+  <pre><code>
+  &lt;iframe src=&quot;https://www.eventbrite.com/tickets-external?eid=4653432542&amp;ref=etckt&amp;v=2&quot;
+          frameborder=&quot;0&quot;
+          height=&quot;256&quot;
+          width=&quot;100%&quot;
+          vspace=&quot;0&quot;
+          hspace=&quot;0&quot;
+          marginheight=&quot;5&quot;
+          marginwidth=&quot;5&quot;
+          scrolling=&quot;auto&quot;
+          allowtransparency=&quot;true&quot;&gt;
+  &lt;/iframe&gt;
+  </code></pre>
+<!--
+  <iframe src="https://www.eventbrite.com/tickets-external?eid=4653432542&ref=etckt&v=2"
+          frameborder="0"
+          height="256"
+          width="100%"
+          vspace="0"
+          hspace="0"
+          marginheight="5"
+          marginwidth="5"
+          scrolling="auto"
+          allowtransparency="true">
+  </iframe>
+-->
+</section>
+
+<section>
+  <h1>Wufoo</h1>
+  http://www.wufoo.com/gallery/templates/forms/contact-form/
+  - iframe based
+</section>
+
+<section>
+  <h1>Google Maps</h1>
+  Embed a map in a website or blog (classic Maps)
+  https://support.google.com/maps/answer/72644?hl=en
+
+  Embed a map (new Google Maps)
+  https://support.google.com/maps/answer/3544418?hl=en
+  http://webdesign.tutsplus.com/tutorials/quick-tip-embedding-new-google-maps--webdesign-15366
+
+  <pre><code>
+  &lt;iframe width=&quot;425&quot; 
+          height=&quot;350&quot; 
+          frameborder=&quot;0&quot; 
+          scrolling=&quot;no&quot; 
+          marginheight=&quot;0&quot; 
+          marginwidth=&quot;0&quot; 
+          src=&quot;https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed&quot;&gt;
+  &lt;/iframe&gt;
+  &lt;br /&gt;
+  &lt;small&gt;
+    &lt;a href=&quot;https://maps.google.ca/maps?f=q&amp;amp;source=embed&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;amp;aq=0&amp;amp;oq=city+hal&amp;amp;sll=43.656877,-79.32085&amp;amp;sspn=0.927981,2.113495&amp;amp;ie=UTF8&amp;amp;hq=City+Hall+Library,&amp;amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;amp;t=m&amp;amp;z=14&amp;amp;iwloc=A&amp;amp;cid=2599218500484294781&amp;amp;ll=43.653023,-79.383602&quot; 
+       style=&quot;color:#0000FF;text-align:left&quot;&gt;View Larger Map
+    &lt;/a&gt;
+  &lt;/small&gt;
+  </code></pre>
+<!--
+  <iframe width="425" 
+          height="350" 
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0" 
+          src="https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed">
+  </iframe>
+  <br />
+  <small>
+  <a href="https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602" style="color:#0000FF;text-align:left">
+  View Larger Map</a>
+  </small>
+-->
+</section>
+
+<section>
+<h3>What's going on here?</h3>
+  <pre><code>
+https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
+  </code></pre>
+<h3>When we split the line on "&" symbols...</h3>
+  <pre><code style="max-height: 500px">
+https://maps.google.ca/maps?
+
+f = q
+source = s_q
+hl = en
+geocode =
+q = City+Hall+Library,+Queen+Street+West,+Toronto,+ON
+aq = 0
+oq = city+hal
+sll = 43.656877,-79.32085
+sspn = 0.927981,2.113495
+ie = UTF8
+hq = City+Hall+Library,
+hnear = Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario
+t = m
+z = 14
+iwloc = A
+cid = 2599218500484294781
+ll = 43.653023,-79.383602
+output = embed
+  </code></pre>
+</section>
+
+<section>
+<h3>Code minification</h3>
+  <pre><code>
+Here'sanexamplesentenceallcrammedtogether.Youcanstillkindofreaditandgetthegistofit,butit'salittlegrosstotryandread.Whenyouseecod ethatlookslikethis,it'sbeenminified.
+</code></pre>
+</section>
+
+<section>
+  <h1>Query String</h1>
+ https://en.wikipedia.org/wiki/Query_string
+<br><br>
+<img src="content/images/query_string.png" style="border: none; width: 100%">
+<br><br>
+The query string is a part of the URL which is passed to the program. Its use permits data to be passed from the HTTP client (often a web browser) to the program which generates the web page.
+</section>
+
+<section>
+  <h1>Associative Array</h1>
+https://en.wikipedia.org/wiki/Associative_array
+<br>
+In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection.
+</section>
+
+
+<section>
+  <h1>Twitter</h1>
+  <!-- Neat sort of workaround, but you have to parse the html
+  http://jasonmayes.com/projects/twitterApi/#sthash.O6XmSRD3.IOXsc9RD.dpbs
+  -->
+
+  https://dev.twitter.com/docs/embedded-tweets
+  https://dev.twitter.com/docs/embedded-timelines
+  <pre><code>
+  &lt;a class=&quot;twitter-timeline&quot; 
+     data-dnt=&quot;true&quot; 
+     href=&quot;https://twitter.com/josh_teneycke&quot; 
+     data-widget-id=&quot;367900161516662784&quot;&gt; 
+     Tweets by @josh_teneycke
+  &lt;/a&gt;
+  </code></pre>  
+  <pre><code>
+    ! function (d, s, id) {
+      var js,
+          fjs = d.getElementsByTagName(s)[0],
+          p = /^http:/.test(d.location) ? 'http' : 'https';
+
+      if(!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + "://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, "script", "twitter-wjs");
+
+  </code></pre>
+<!--
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/josh_teneycke" data-widget-id="367900161516662784">Tweets by @josh_teneycke</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+-->
+</section>
+
+<section>
+  <h1>Pintrest</H1>
+  http://business.pinterest.com/en/widget-builder#do_embed_user
+
+  <a data-pin-do="embedUser" href="http://www.pinterest.com/pinterest/">Visit Pinterest's profile on Pinterest.</a>
+  <!-- Please call pinit.js only once per page -->
+  <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+</section>
 
     </div>
 
