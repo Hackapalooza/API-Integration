@@ -4,3 +4,9 @@ a {
   text-decoration: underline !important;
   font-size: 30px !important;
 }
+
+.lower {
+  width: 50%;
+  float: left;
+  display: block;
+}

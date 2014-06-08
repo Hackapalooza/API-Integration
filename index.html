@@ -159,7 +159,8 @@ In practice, many times an API comes in the form of a library that includes spec
 
   </tbody></table>
   <br>
-    http://www.dwuser.com/education/content/the-magical-iframe-tag-an-introduction/
+  <a href="http://www.dwuser.com/education/content/the-magical-iframe-tag-an-introduction/">The Magical &lt;iframe&gt; Tag: An Introduction
+</a>
   </section>
 </section>
 
@@ -239,19 +240,21 @@ In practice, many times an API comes in the form of a library that includes spec
 
 <section>
   <section>
-    <h1>Vimeo (where to find)</h1>
+    <h1>Vimeo (share button)</h1>
     <img src="content/images/vimeo_1.png" style="border: none; width: 100%">
   </section>
 
   <section>
-    <h1>Vimeo (where to find)</h1>
+    <h1>Vimeo (embed code)</h1>
     <img src="content/images/vimeo_2.png" style="border: none; width: 100%">
   </section>
 
   <section>
     <h1>Vimeo</h1>
-    http://developer.vimeo.com/player/embedding
-    - Good example, pretty clear documentation
+    Good example, nice clear documentation
+    <br>
+    <a href="http://developer.vimeo.com/player/embedding">Player Embedding on Vimeo Developer API</a>
+
     <pre><code>
 &lt;iframe src=&quot;//player.vimeo.com/video/77178239?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0&amp;amp;color=FFB700&quot;
         width=&quot;500&quot;
@@ -269,6 +272,7 @@ In practice, many times an API comes in the form of a library that includes spec
 &lt;/p&gt;
     </code></pre>
   </section>
+
   <section>
     <h1>Vimeo (example)</h1>
     <iframe src="//player.vimeo.com/video/77178239?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=FFB700"
@@ -286,40 +290,60 @@ In practice, many times an API comes in the form of a library that includes spec
 </section>
 
 <section>
-  <h1>Eventbrite</h1>
-  https://developer.eventbrite.com/doc/widgets/
-  <pre><code>
-  &lt;iframe src=&quot;https://www.eventbrite.com/tickets-external?eid=4653432542&amp;ref=etckt&amp;v=2&quot;
-          frameborder=&quot;0&quot;
-          height=&quot;256&quot;
-          width=&quot;100%&quot;
-          vspace=&quot;0&quot;
-          hspace=&quot;0&quot;
-          marginheight=&quot;5&quot;
-          marginwidth=&quot;5&quot;
-          scrolling=&quot;auto&quot;
-          allowtransparency=&quot;true&quot;&gt;
-  &lt;/iframe&gt;
-  </code></pre>
-<!--
-  <iframe src="https://www.eventbrite.com/tickets-external?eid=4653432542&ref=etckt&v=2"
-          frameborder="0"
-          height="256"
-          width="100%"
-          vspace="0"
-          hspace="0"
-          marginheight="5"
-          marginwidth="5"
-          scrolling="auto"
-          allowtransparency="true">
-  </iframe>
--->
-</section>
+  <section>
+    <h1>Eventbrite (where to find)</h1>
+    <img src="content/images/eventbrite_1.png" style="border: none; width: 100%">
+    <a href="https://developer.eventbrite.com/doc/widgets/">https://developer.eventbrite.com/doc/widgets/</a>
+  </section>
 
-<section>
-  <h1>Wufoo</h1>
-  http://www.wufoo.com/gallery/templates/forms/contact-form/
-  - iframe based
+  <section>
+  <h1>Eventbrite Registration <br> (code + example)</h1>
+    <pre><code>
+    &lt;iframe src=&quot;https://www.eventbrite.com/tickets-external?eid=4653432542&amp;ref=etckt&amp;v=2&quot;
+            frameborder=&quot;0&quot;
+            height=&quot;256&quot;
+            width=&quot;100%&quot;
+            vspace=&quot;0&quot;
+            hspace=&quot;0&quot;
+            marginheight=&quot;5&quot;
+            marginwidth=&quot;5&quot;
+            scrolling=&quot;auto&quot;
+            allowtransparency=&quot;true&quot;&gt;
+    &lt;/iframe&gt;
+    </code></pre>
+
+    <div class="lower">
+    <iframe src="https://www.eventbrite.com/tickets-external?eid=4653432542&ref=etckt&v=2"
+            frameborder="0"
+            height="256"
+            width="100%"
+            vspace="0"
+            hspace="0"
+            marginheight="5"
+            marginwidth="5"
+            scrolling="auto"
+            allowtransparency="true">
+    </iframe>
+    </div>
+  </section>
+
+  <section>
+  <h1>Eventbrite Countdown <br> (code + example)</h1>
+    <pre><code>
+  &lt;a href=&quot;http://www.eventbrite.com/event/4653432542?ref=ebtn&quot;
+     target=&quot;_blank&quot;&gt;
+  &lt;img border=&quot;0&quot;
+       src=&quot;https://www.eventbrite.com/custombutton?eid=4653432542&quot;
+       alt=&quot;Register for Eventbrite API - Office Hours on Eventbrite&quot; /&gt;
+  &lt;/a&gt;
+    </code></pre>
+
+    <div class="lower">
+      <a href="http://www.eventbrite.com/event/4653432542?ref=ebtn" target="_blank">
+        <img border="0" src="https://www.eventbrite.com/custombutton?eid=4653432542" alt="Register for Eventbrite API - Office Hours on Eventbrite" style="border: none" />
+      </a>
+    </div>
+  </section>
 </section>
 
 <section>
@@ -366,45 +390,8 @@ In practice, many times an API comes in the form of a library that includes spec
   </section>
 
   <section>
-  <h3>What's going on here?</h3>
-    <pre><code>
-  https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
-    </code></pre>
-  <h3>When we split the line on "&" symbols...</h3>
-    <pre><code style="max-height: 500px">
-  https://maps.google.ca/maps?
-
-  f = q
-  source = s_q
-  hl = en
-  geocode =
-  q = City+Hall+Library,+Queen+Street+West,+Toronto,+ON
-  aq = 0
-  oq = city+hal
-  sll = 43.656877,-79.32085
-  sspn = 0.927981,2.113495
-  ie = UTF8
-  hq = City+Hall+Library,
-  hnear = Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario
-  t = m
-  z = 14
-  iwloc = A
-  cid = 2599218500484294781
-  ll = 43.653023,-79.383602
-  output = embed
-    </code></pre>
-  </section>
-
-  <section>
-  <h3>Code minification</h3>
-    <pre><code>
-  Here'sanexamplesentenceallcrammedtogether.Youcanstillkindofreaditandgetthegistofit,butit'salittlegrosstotryandread.Whenyouseecod ethatlookslikethis,it'sbeenminified.
-  </code></pre>
-  </section>
-
-  <section>
     <h1>Query String</h1>
-   https://en.wikipedia.org/wiki/Query_string
+    <a href="https://en.wikipedia.org/wiki/Query_string">https://en.wikipedia.org/wiki/Query_string</a>
   <br><br>
   <img src="content/images/query_string.png" style="border: none; width: 100%">
   <br><br>
@@ -412,11 +399,46 @@ In practice, many times an API comes in the form of a library that includes spec
   </section>
 
   <section>
-    <h1>Associative Array</h1>
-  https://en.wikipedia.org/wiki/Associative_array
+  <p class="fragment">
+    <h1>What's this long url all about?</h1>
+    <pre><code>
+  https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
+    </code></pre>
+  </p>
+  <p class="fragment linear">
+    <h3>When we split the line on "&" symbols...</h3>
+      <pre><code style="max-height: 500px">
+    https://maps.google.ca/maps?
+
+    f = q
+    source = s_q
+    hl = en
+    geocode =
+    q = City+Hall+Library,+Queen+Street+West,+Toronto,+ON
+    aq = 0
+    oq = city+hal
+    sll = 43.656877,-79.32085
+    sspn = 0.927981,2.113495
+    ie = UTF8
+    hq = City+Hall+Library,
+    hnear = Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario
+    t = m
+    z = 14
+    iwloc = A
+    cid = 2599218500484294781
+    ll = 43.653023,-79.383602
+    output = embed
+      </code></pre>
+  </p>
+  </section>
+
+  <section>
+  <h3>Hashes,<br> Key / Value Pairs,<br> Dictionaries,<br> and Associative Array's</h3>
+    <a href="https://en.wikipedia.org/wiki/Associative_array">https://en.wikipedia.org/wiki/Associative_array</a>
   <br>
   In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection.
   </section>
+
 </section>
 
 
