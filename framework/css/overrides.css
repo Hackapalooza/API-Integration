@@ -1,1 +1,6 @@
 /* put specific overrides to CSS for your workshop in this file */
+
+a {
+  text-decoration: underline !important;
+  font-size: 30px !important;
+}

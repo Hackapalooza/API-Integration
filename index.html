@@ -78,7 +78,7 @@
           <li>What is an API?</li>
           <li>Iframes and Embeds</li>
         </ul>
-        <h2>Show me the code</h2>
+        <h2>Show me the code!</h2>
         <ul>
           <li>Instagram (iframe)</li>
           <li>Youtube (iframe)</li>
@@ -99,132 +99,190 @@ In practice, many times an API comes in the form of a library that includes spec
 
 
 <section>
-  <h1>Inline Frame (IFrame)</h1>
+  <section>
+    <h1>Inline Frame (IFrame)</h1>
+    <img src="content/images/frame_pain.jpg" style="border: none; width: 100%">
+  </section>
 
-<img src="content/images/frame_pain.jpg" style="border: none; width: 100%">
+  <section>
+    <h2>IFrame-ception!</h2>
+    An IFrame element may contain another HTML document or even an entire website within the same browser window.
+    <br>
+    <img src="content/images/inception-gif.jpg" style="border: none; width: 100%">
+    <br>
+    In addition to having an independent scrollbar, the IFrame can serve as a link target, be printed and contains viewable source code.
+
+    <br><br>
+    https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe
+  </section>
+
+  <section>
+    <h1>Generic Iframe Example</h1>
+    <pre><code>
+    &lt;iframe src=&quot;somewebsite.com/&quot;
+            width=&quot;612&quot;
+            height=&quot;710&quot;
+            frameborder=&quot;0&quot;
+            scrolling=&quot;no&quot;
+            allowtransparency=&quot;true&quot;&gt;
+    &lt;/iframe&gt;
+    </code></pre>
+  </section>
+
+  <section>
+    <h1>Iframe Options</h1>
+    <table border="0" cellspacing="0" cellpadding="0" class="ifInfo" style="margin-bottom: 15px; font-size: 18px">
+    <tbody><tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Description</th>
+    </tr>
+
+    <tr>
+      <td><code>name</code></td>
+      <td>As described above, this attribute can be used in conjunction with the <code>target</code> attribute of a link to change the iframe's <code>src</code></td>
+    </tr>
+
+    <tr>
+      <td><code>scrolling</code></td>
+      <td>Can be <code>scrolling="yes"</code> or <code>scrolling="no"</code> . Specifies if a scrollbar should be shown for the content in the frame. Note that using CSS is actually the preferred method for controlling scrolling, but we still use the <code>scrolling</code> attribute to ensure compatibility with older browsers.</td>
+    </tr>
+
+    <tr>
+      <td><code>frameborder</code></td>
+      <td>This controls whether there is a border on the frame (<code>frameborder="1"</code>) or not (<code>frameborder="0"</code>). As with <code>scrolling</code>, this property really should be controlled via CSS, but we have to stick with <code>frameborder</code> for browser compatibility. By setting <code>frameborder="0"</code>, the iframe becomes much less noticeable and the content appears to be part of the main page.</td>
+    </tr>
+
+    <tr>
+      <td><code>allowtransparency</code></td>
+      <td>If you want the background of your main page to be visible behind the iframe, you need to enable transparency by adding <code>allowtransparency="true"</code> .</td>
+    </tr>
+
+  </tbody></table>
+  <br>
+    http://www.dwuser.com/education/content/the-magical-iframe-tag-an-introduction/
+  </section>
 </section>
 
 <section>
-  <h2>IFrame-ception!</h2>
-An IFrame element may contain another HTML document or even an entire website within the same browser window.
-<br>
-<img src="content/images/inception-gif.jpg" style="border: none; width: 100%">
-<br>
-In addition to having an independent scrollbar, the IFrame can serve as a link target, be printed and contains viewable source code.
+  <section>
+    <h1>Instagram (where to find)</h1>
+    <img src="content/images/instagram_1.png" style="border: none; width: 100%">
+  </section>
 
-  <br><br>
-  https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe
-  
-  <br><br>
+  <section>
+    <h1>Instagram (code)</h1>
+     <!-- http://instafeedjs.com/
+    How can I embed my Instagram photos or videos on a web page?
+    https://help.instagram.com/513918941996087
 
-</section>
+  We provide two simple ways to get information about a shared link in order to display a preview: an OEmbed endpoint and a simple URL append endpoint. Neither requires an access_token or client_id.
+    http://instagram.com/developer/embedding/
+  -->
+    <pre><code>
+    &lt;iframe src=&quot;//instagram.com/p/bNTUnwB0Kw/embed/&quot;
+            width=&quot;612&quot;
+            height=&quot;710&quot;
+            frameborder=&quot;0&quot;
+            scrolling=&quot;no&quot;
+            allowtransparency=&quot;true&quot;&gt;
+    &lt;/iframe&gt;
+    </code></pre>
+  </section>
 
-<section>
-  <h1>Iframe Options</h1>
-  <table border="0" cellspacing="0" cellpadding="0" class="ifInfo" style="margin-bottom: 15px; font-size: 18px">
-  <tbody><tr>
-    <th scope="col">Attribute</th>
-    <th scope="col">Description</th>
-  </tr>
-  <tr>
-    <td><code>name</code></td>
-    <td>As described above, this attribute can be used in conjunction with the <code>target</code> attribute of a link to change the iframe's <code>src</code></td>
-  </tr>
-  <tr>
-    <td><code>scrolling</code></td>
-    <td>Can be <code>scrolling="yes"</code> or <code>scrolling="no"</code> . Specifies if a scrollbar should be shown for the content in the frame. Note that using CSS is actually the preferred method for controlling scrolling, but we still use the <code>scrolling</code> attribute to ensure compatibility with older browsers.</td>
-  </tr>
-  <tr>
-    <td><code>frameborder</code></td>
-    <td>This controls whether there is a border on the frame (<code>frameborder="1"</code>) or not (<code>frameborder="0"</code>). As with <code>scrolling</code>, this property really should be controlled via CSS, but we have to stick with <code>frameborder</code> for browser compatibility. By setting <code>frameborder="0"</code>, the iframe becomes much less noticeable and the content appears to be part of the main page.</td>
-  </tr>
-  <tr>
-    <td><code>allowtransparency</code></td>
-    <td>If you want the background of your main page to be visible behind the iframe, you need to enable transparency by adding <code>allowtransparency="true"</code> .</td>
-  </tr>
-</tbody></table>
-<br>
-  http://www.dwuser.com/education/content/the-magical-iframe-tag-an-introduction/
-</section>
-
-<section>
-  <h1>Instagram</h1>
-   <!-- http://instafeedjs.com/
-  How can I embed my Instagram photos or videos on a web page?
-  https://help.instagram.com/513918941996087
-
-We provide two simple ways to get information about a shared link in order to display a preview: an OEmbed endpoint and a simple URL append endpoint. Neither requires an access_token or client_id.-->
-  http://instagram.com/developer/embedding/
-
-  <pre><code>
-  &lt;iframe src=&quot;//instagram.com/p/bNTUnwB0Kw/embed/&quot;
-          width=&quot;612&quot;
-          height=&quot;710&quot;
-          frameborder=&quot;0&quot;
-          scrolling=&quot;no&quot;
-          allowtransparency=&quot;true&quot;&gt;
-  &lt;/iframe&gt;
-  </code></pre>
-
-<!--
- <iframe src="//instagram.com/p/bNTUnwB0Kw/embed/"
+  <section>
+    <h1>Instagram (example)</h1>
+    <iframe src="//instagram.com/p/bNTUnwB0Kw/embed/"
             width="612"
             height="710"
             frameborder="0"
             scrolling="no"
-            allowtransparency="true"
-    ></iframe>
--->
+            allowtransparency="true">
+    </iframe>
+  </section>
 </section>
 
 <section>
-  <h1>Youtube</h1>
-  http://leaderswest.com/2012/10/10/youtube-embed-options-can-make-your-videos-look-less-youtube-y/
-<br><br>
-  https://developers.google.com/youtube/player_parameters
-  <pre><code>
-   &lt;iframe width=&quot;420&quot;
-           height=&quot;315&quot;
-           src=&quot;//www.youtube.com/embed/N4d7Wp9kKjA&quot;
-           frameborder=&quot;0&quot;
-           allowfullscreen&gt;
-   &lt;/iframe&gt;
-  </code></pre>
-<!--
- <iframe width="420"
-          height="315"
-          src="//www.youtube.com/embed/N4d7Wp9kKjA"
-          frameborder="0"
-          allowfullscreen>
-</iframe>
--->
+  <section>
+    <h1>Youtube (where to find)</h1>
+    <img src="content/images/youtube_1.png" style="border: none; width: 100%">
+  </section>
 
+  <section>
+    <h1>Youtube (code)</h1>
+    <pre><code>
+     &lt;iframe width=&quot;420&quot;
+             height=&quot;315&quot;
+             src=&quot;//www.youtube.com/embed/Q-WM-x__BOk&quot;
+             frameborder=&quot;0&quot;
+             allowfullscreen&gt;
+     &lt;/iframe&gt;
+    </code></pre>
+    <br>
+    <ul>
+      <li><a href="http://leaderswest.com/2012/10/10/youtube-embed-options-can-make-your-videos-look-less-youtube-y/">
+        YouTube embed options can make your videos look less YouTube-y</a></li>
+      <li><a href="https://developers.google.com/youtube/player_parameters">
+        YouTube Embedded Players and Player Parameters</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Youtube (example)</h1>
+    <iframe width="420"
+            height="315"
+            src="//www.youtube.com/embed/Q-WM-x__BOk"
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+  </section>
 </section>
 
 <section>
-  <h1>Vimeo</h1>
-  http://developer.vimeo.com/player/embedding
-  - Good example, pretty clear documentation
-  <pre><code>
-  &lt;iframe src=&quot;//player.vimeo.com/video/VIDEO_ID&quot;
-          width=&quot;WIDTH&quot;
-          height=&quot;HEIGHT&quot;
-          frameborder=&quot;0&quot;
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen&gt;
-  &lt;/iframe&gt;
-  </code></pre>
-<!--
-  <iframe src="//player.vimeo.com/video/VIDEO_ID"
-          width="WIDTH"
-          height="HEIGHT"
-          frameborder="0"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen>
-  </iframe>
--->
+  <section>
+    <h1>Vimeo (where to find)</h1>
+    <img src="content/images/vimeo_1.png" style="border: none; width: 100%">
+  </section>
+
+  <section>
+    <h1>Vimeo (where to find)</h1>
+    <img src="content/images/vimeo_2.png" style="border: none; width: 100%">
+  </section>
+
+  <section>
+    <h1>Vimeo</h1>
+    http://developer.vimeo.com/player/embedding
+    - Good example, pretty clear documentation
+    <pre><code>
+&lt;iframe src=&quot;//player.vimeo.com/video/77178239?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0&amp;amp;color=FFB700&quot;
+        width=&quot;500&quot;
+        height=&quot;281&quot;
+        frameborder=&quot;0&quot;
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;
+  &lt;a href=&quot;http://vimeo.com/77178239&quot;&gt;Caveir&atilde;o&lt;/a&gt; from
+  &lt;a href=&quot;http://vimeo.com/guitv&quot;&gt;Guilherme Marcondes&lt;/a&gt; on
+  &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.
+&lt;/p&gt;
+    </code></pre>
+  </section>
+  <section>
+    <h1>Vimeo (example)</h1>
+    <iframe src="//player.vimeo.com/video/77178239?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=FFB700"
+      width="500"
+      height="281"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen>
+    </iframe>
+    <p><a href="http://vimeo.com/77178239">Caveirão</a> from
+    <a href="http://vimeo.com/guitv">Guilherme Marcondes</a> on
+    <a href="https://vimeo.com">Vimeo</a>.</p>
+  </section>
 </section>
 
 <section>
@@ -265,98 +323,100 @@ We provide two simple ways to get information about a shared link in order to di
 </section>
 
 <section>
-  <h1>Google Maps</h1>
-  Embed a map in a website or blog (classic Maps)
-  https://support.google.com/maps/answer/72644?hl=en
+  <section>
+    <h1>Google Maps</h1>
+    Embed a map in a website or blog (classic Maps)
+    https://support.google.com/maps/answer/72644?hl=en
 
-  Embed a map (new Google Maps)
-  https://support.google.com/maps/answer/3544418?hl=en
-  http://webdesign.tutsplus.com/tutorials/quick-tip-embedding-new-google-maps--webdesign-15366
+    Embed a map (new Google Maps)
+    https://support.google.com/maps/answer/3544418?hl=en
+    http://webdesign.tutsplus.com/tutorials/quick-tip-embedding-new-google-maps--webdesign-15366
 
-  <pre><code>
-  &lt;iframe width=&quot;425&quot; 
-          height=&quot;350&quot; 
-          frameborder=&quot;0&quot; 
-          scrolling=&quot;no&quot; 
-          marginheight=&quot;0&quot; 
-          marginwidth=&quot;0&quot; 
-          src=&quot;https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed&quot;&gt;
-  &lt;/iframe&gt;
-  &lt;br /&gt;
-  &lt;small&gt;
-    &lt;a href=&quot;https://maps.google.ca/maps?f=q&amp;amp;source=embed&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;amp;aq=0&amp;amp;oq=city+hal&amp;amp;sll=43.656877,-79.32085&amp;amp;sspn=0.927981,2.113495&amp;amp;ie=UTF8&amp;amp;hq=City+Hall+Library,&amp;amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;amp;t=m&amp;amp;z=14&amp;amp;iwloc=A&amp;amp;cid=2599218500484294781&amp;amp;ll=43.653023,-79.383602&quot; 
-       style=&quot;color:#0000FF;text-align:left&quot;&gt;View Larger Map
-    &lt;/a&gt;
-  &lt;/small&gt;
+    <pre><code>
+    &lt;iframe width=&quot;425&quot; 
+            height=&quot;350&quot; 
+            frameborder=&quot;0&quot; 
+            scrolling=&quot;no&quot; 
+            marginheight=&quot;0&quot; 
+            marginwidth=&quot;0&quot; 
+            src=&quot;https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed&quot;&gt;
+    &lt;/iframe&gt;
+    &lt;br /&gt;
+    &lt;small&gt;
+      &lt;a href=&quot;https://maps.google.ca/maps?f=q&amp;amp;source=embed&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;amp;aq=0&amp;amp;oq=city+hal&amp;amp;sll=43.656877,-79.32085&amp;amp;sspn=0.927981,2.113495&amp;amp;ie=UTF8&amp;amp;hq=City+Hall+Library,&amp;amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;amp;t=m&amp;amp;z=14&amp;amp;iwloc=A&amp;amp;cid=2599218500484294781&amp;amp;ll=43.653023,-79.383602&quot; 
+         style=&quot;color:#0000FF;text-align:left&quot;&gt;View Larger Map
+      &lt;/a&gt;
+    &lt;/small&gt;
+    </code></pre>
+  <!--
+    <iframe width="425" 
+            height="350" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0" 
+            src="https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed">
+    </iframe>
+    <br />
+    <small>
+    <a href="https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602" style="color:#0000FF;text-align:left">
+    View Larger Map</a>
+    </small>
+  -->
+  </section>
+
+  <section>
+  <h3>What's going on here?</h3>
+    <pre><code>
+  https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
+    </code></pre>
+  <h3>When we split the line on "&" symbols...</h3>
+    <pre><code style="max-height: 500px">
+  https://maps.google.ca/maps?
+
+  f = q
+  source = s_q
+  hl = en
+  geocode =
+  q = City+Hall+Library,+Queen+Street+West,+Toronto,+ON
+  aq = 0
+  oq = city+hal
+  sll = 43.656877,-79.32085
+  sspn = 0.927981,2.113495
+  ie = UTF8
+  hq = City+Hall+Library,
+  hnear = Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario
+  t = m
+  z = 14
+  iwloc = A
+  cid = 2599218500484294781
+  ll = 43.653023,-79.383602
+  output = embed
+    </code></pre>
+  </section>
+
+  <section>
+  <h3>Code minification</h3>
+    <pre><code>
+  Here'sanexamplesentenceallcrammedtogether.Youcanstillkindofreaditandgetthegistofit,butit'salittlegrosstotryandread.Whenyouseecod ethatlookslikethis,it'sbeenminified.
   </code></pre>
-<!--
-  <iframe width="425" 
-          height="350" 
-          frameborder="0" 
-          scrolling="no" 
-          marginheight="0" 
-          marginwidth="0" 
-          src="https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed">
-  </iframe>
-  <br />
-  <small>
-  <a href="https://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602" style="color:#0000FF;text-align:left">
-  View Larger Map</a>
-  </small>
--->
-</section>
+  </section>
 
-<section>
-<h3>What's going on here?</h3>
-  <pre><code>
-https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
-  </code></pre>
-<h3>When we split the line on "&" symbols...</h3>
-  <pre><code style="max-height: 500px">
-https://maps.google.ca/maps?
+  <section>
+    <h1>Query String</h1>
+   https://en.wikipedia.org/wiki/Query_string
+  <br><br>
+  <img src="content/images/query_string.png" style="border: none; width: 100%">
+  <br><br>
+  The query string is a part of the URL which is passed to the program. Its use permits data to be passed from the HTTP client (often a web browser) to the program which generates the web page.
+  </section>
 
-f = q
-source = s_q
-hl = en
-geocode =
-q = City+Hall+Library,+Queen+Street+West,+Toronto,+ON
-aq = 0
-oq = city+hal
-sll = 43.656877,-79.32085
-sspn = 0.927981,2.113495
-ie = UTF8
-hq = City+Hall+Library,
-hnear = Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario
-t = m
-z = 14
-iwloc = A
-cid = 2599218500484294781
-ll = 43.653023,-79.383602
-output = embed
-  </code></pre>
-</section>
-
-<section>
-<h3>Code minification</h3>
-  <pre><code>
-Here'sanexamplesentenceallcrammedtogether.Youcanstillkindofreaditandgetthegistofit,butit'salittlegrosstotryandread.Whenyouseecod ethatlookslikethis,it'sbeenminified.
-</code></pre>
-</section>
-
-<section>
-  <h1>Query String</h1>
- https://en.wikipedia.org/wiki/Query_string
-<br><br>
-<img src="content/images/query_string.png" style="border: none; width: 100%">
-<br><br>
-The query string is a part of the URL which is passed to the program. Its use permits data to be passed from the HTTP client (often a web browser) to the program which generates the web page.
-</section>
-
-<section>
-  <h1>Associative Array</h1>
-https://en.wikipedia.org/wiki/Associative_array
-<br>
-In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection.
+  <section>
+    <h1>Associative Array</h1>
+  https://en.wikipedia.org/wiki/Associative_array
+  <br>
+  In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection.
+  </section>
 </section>
 
 
