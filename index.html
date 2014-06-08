@@ -42,7 +42,8 @@
       <section class="center">
         <h1>API Integration: Getting Social</h1>
 
-	Learn how to integrate your tweets, Instagram photos, Google Maps and other social media and APIs to your site.
+        Learn how to integrate your tweets, Instagram photos, Google Maps and other social media and APIs to your site.
+        <a href="https://hackapalooza.github.io/API-Integration/">https://hackapalooza.github.io/API-Integration/</a>
       </section>
       <!-- each <section> element creates a new slide. -->
       <section class="cover">
@@ -91,10 +92,27 @@
       </section>
 
 <section>
-  <H1>Application Programming Interface</H1>
-  In computer programming, an application programming interface (API) specifies how some software components should interact with each other.
-  <br><br>
-In practice, many times an API comes in the form of a library that includes specifications for routines, data structures, object classes, and variables.
+  <section>
+    <H1>Application Programming Interface</H1>
+    In computer programming, an application programming interface (API) specifies how some software components should interact with each other.
+    <br><br>
+  In practice, many times an API comes in the form of a library that includes specifications for routines, data structures, object classes, and variables.
+  </section>
+
+  <section>
+    <H1>Interface</H1>
+    In computing, an interface is a shared boundary across which two separate components of a computer system exchange information.<br><br> The exchange can be between software, computer hardware, peripheral devices, humans and combinations of these.
+  </section>
+
+  <section>
+    <H1>Client / Server</H1>
+    <img src="content/images/468px-Client-server-model.svg.png" style="border: none;">
+    <br>
+    <p>
+    The client–server model of computing is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called servers, and service requesters, called clients.<br><br>
+    Often clients and servers communicate over a computer network on separate hardware, but both client and server may reside in the same system. A server host runs one or more server programs which share their resources with clients.<br><br>
+    A client does not share any of its resources, but requests a server's content or service function. Clients therefore initiate communication sessions with servers which await incoming requests.</p>
+  </section>
 </section>
 
 
@@ -407,6 +425,14 @@ In practice, many times an API comes in the form of a library that includes spec
   </section>
 
   <section>
+    <h3>What's the deal with this long url?</h3>
+    <pre><code>
+  https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
+    </code></pre>
+    <img src="content/images/squint.png" style="border: none;">
+  </section>
+
+  <section>
     <h1>Query String</h1>
     <a href="https://en.wikipedia.org/wiki/Query_string">https://en.wikipedia.org/wiki/Query_string</a>
   <br><br>
@@ -416,13 +442,6 @@ In practice, many times an API comes in the form of a library that includes spec
   </section>
 
   <section>
-  <p class="fragment">
-    <h1>What's this long url all about?</h1>
-    <pre><code>
-  https://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=City+Hall+Library,+Queen+Street+West,+Toronto,+ON&amp;aq=0&amp;oq=city+hal&amp;sll=43.656877,-79.32085&amp;sspn=0.927981,2.113495&amp;ie=UTF8&amp;hq=City+Hall+Library,&amp;hnear=Queen+Street+West,+Old+Toronto,+Toronto,+Toronto+Division,+Ontario&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2599218500484294781&amp;ll=43.653023,-79.383602&amp;output=embed
-    </code></pre>
-  </p>
-  <p class="fragment linear">
     <h3>When we split the line on "&" symbols...</h3>
       <pre><code style="max-height: 500px">
     https://maps.google.ca/maps?
@@ -446,7 +465,6 @@ In practice, many times an API comes in the form of a library that includes spec
     ll = 43.653023,-79.383602
     output = embed
       </code></pre>
-  </p>
   </section>
 
   <section>
@@ -454,6 +472,16 @@ In practice, many times an API comes in the form of a library that includes spec
     <a href="https://en.wikipedia.org/wiki/Associative_array">https://en.wikipedia.org/wiki/Associative_array</a>
   <br>
   In computer science, an associative array, map, symbol table, or dictionary is an abstract data type composed of a collection of (key, value) pairs, such that each possible key appears at most once in the collection.
+
+    <pre><code>
+    # ruby example
+
+    person: {
+      name: "Sally",
+      height: "5 feet, 4 inches",
+      age: 27
+    }
+    </code></pre>
   </section>
 
 </section>
